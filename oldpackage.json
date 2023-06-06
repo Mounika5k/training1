@@ -1,0 +1,84 @@
+{
+  "name": "qp-user-management-service",
+  "version": "1.0.20",
+  "description": "Create user-management-service with selected DB",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=v18.0.0"
+  },
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon src",
+    "test": "echo \"Running tests... \n Done.\" && exit 0",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quantela/qp-user-management-service"
+  },
+  "keywords": [
+    "fastify",
+    "got",
+    "pino",
+    "docker",
+    "prometheus"
+  ],
+  "author": "quantela",
+  "license": "MIT",
+  "homepage": "https://github.com/quantela/qp-user-management-service#readme",
+  "devDependencies": {
+    "eslint": "8.28.0",
+    "eslint-config-google": "0.14.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-unicorn": "43.0.2",
+    "husky": "8.0.2",
+    "pino-pretty": "9.1.1",
+    "prettier": "2.7.1"
+  },
+  "dependencies": {
+    "@fastify/autoload": "5.6.0",
+    "@fastify/cors": "8.2.0",
+    "@fastify/formbody": "7.3.0",
+    "@fastify/helmet": "10.1.0",
+    "@fastify/rate-limit": "8.0.0",
+    "@fastify/swagger": "7.6.1",
+    "@fastify/under-pressure": "8.2.0",
+    "aes256": "1.1.0",
+    "ajv": "8.11.2",
+    "ajv-errors": "3.0.0",
+    "ajv-formats": "2.1.1",
+    "axios": "1.2.2",
+    "bullmq": "3.9.0",
+    "crypto": "1.0.1",
+    "crypto-js": "4.1.1",
+    "dotenv": "16.0.3",
+    "fastify": "4.10.2",
+    "fastify-healthcheck": "4.2.0",
+    "fastify-plugin": "4.3.0",
+    "geoip-lite": "1.4.7",
+    "ioredis": "5.2.4",
+    "json-stringify-safe": "5.0.1",
+    "knex": "2.4.1",
+    "ldapjs": "2.3.3",
+    "make-promises-safe": "5.1.0",
+    "moment": "2.29.4",
+    "moment-timezone": "0.5.41",
+    "nodemon": "2.0.20",
+    "pg": "8.8.0",
+    "pino": "8.7.0",
+    "pino-multi-stream": "6.0.0",
+    "ramda": "0.28.0",
+    "redis": "4.5.1",
+    "uuid": "8.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint && npm run test"
+    }
+  }
+}
