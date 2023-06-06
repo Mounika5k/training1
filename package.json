@@ -1,0 +1,39 @@
+{
+    "name": "User Management",
+    "main": "src/index.js",
+    "engines": {
+        "node": ">=v18.0.0"
+    },
+    "scripts": {
+        "start": "node .",
+        "dev": "nodemon src",
+        "test": "echo \"Running tests... \n Done.\" && exit 0",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "knex": "node -r dotenv/config ./node_module/.bin/knex",
+        "migrate": "npm run knex -- migrate:latest --debug --knexfile ./config/knexconfig",
+        "migrate:make": "knex -- migrate:make"
+    },
+    "dependencies": {
+        "fastify": "4.17.0",
+        "@fastify/sensible": "5.2.0",
+        "@fastify/swagger": "7.6.1",
+        "@fastify/autoload": "5.6.0",
+        "@fastify/cors": "8.2.0",
+        "@fastify/formbody": "7.3.0",
+        "@fastify/helmet": "10.1.0",
+        "@fastify/under-pressure": "8.2.0"
+    },
+
+    "devDependencies": {
+        "eslint": "8.28.0",
+        "eslint-config-google": "0.14.0",
+        "eslint-config-prettier": "8.5.0",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "4.2.1",
+        "eslint-plugin-unicorn": "43.0.2",
+        "husky": "8.0.2",
+        "pino-pretty": "9.1.1",
+        "prettier": "2.7.1"
+    }
+}
